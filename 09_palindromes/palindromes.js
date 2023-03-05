@@ -1,10 +1,12 @@
-const palindromes = function (string) {
+const palindromes = function (word) {
+    let noSpaces = word.replaceAll(' ', '');
+    let string = noSpaces.replaceAll(' ', '').replace(/[.,!$%^&#*]/g, "").toLowerCase();
     let startIndex = 0;
     let endIndex = string.length - 1;
 
     let isPalindrome = false;
 
-    while (startIndex != endIndex) {
+    while (startIndex != endIndex && startIndex < endIndex) {
         if(string[startIndex] == string[endIndex]) {
             isPalindrome = true;
             startIndex = startIndex + 1;
@@ -22,6 +24,7 @@ const palindromes = function (string) {
     return isPalindrome;
 
 };
+
 
 // Do not edit below this line
 module.exports = palindromes;
