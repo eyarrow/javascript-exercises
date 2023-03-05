@@ -30,11 +30,27 @@ const multiply = function(array) {
 
 };
 
-const power = function() {
+const power = function(base, exponent) {
+  let raised = 1;
+
+  for(let i = 0; i < exponent; i++) {
+    raised *= base;
+  }
+
+  // 4 ^ 3 - 4, 16, 
+
+  return raised;
 	
 };
 
-const factorial = function() {
+const factorial = function(number) {
+  let factorial = 1;
+
+  for(let i = number; i > 0; i--) {
+    factorial *= i;
+  }
+
+  return factorial;
 	
 };
 
