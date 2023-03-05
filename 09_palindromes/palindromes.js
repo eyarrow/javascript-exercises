@@ -1,27 +1,8 @@
-const palindromes = function (word) {
-    let noSpaces = word.replaceAll(' ', '');
-    let string = noSpaces.replaceAll(' ', '').replace(/[.,!$%^&#*]/g, "").toLowerCase();
-    let startIndex = 0;
-    let endIndex = string.length - 1;
+const palindromes = function (string) {
+    let procString = string.toLowerCase().replace(/[^a-z]/g, "");
+    return procString.split("").reverse().join("") == procString;
 
-    let isPalindrome = false;
-
-    while (startIndex != endIndex && startIndex < endIndex) {
-        if(string[startIndex] == string[endIndex]) {
-            isPalindrome = true;
-            startIndex = startIndex + 1;
-            endIndex = endIndex - 1;
-        }
-        else {
-            return false;
-        }
-    }
-
-    // 'racecar' length = 7
-    // start index = 0, endindex = 6
-    //
-
-    return isPalindrome;
+    //use two pointer technique to manipulate efficiency. 
 
 };
 
