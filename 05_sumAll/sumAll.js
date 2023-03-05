@@ -17,13 +17,9 @@ const sumAll = function(start, end) {
     let totalSum = 0;
     let numArray = [];
 
-    if(start < 0 || end < 0) {
-        return 'ERROR';
-    }
+    if(start < 0 || end < 0) { return 'ERROR'; }
 
-    if(!Number.isInteger(start) || !Number.isInteger(end)) {
-        return 'ERROR';
-    }
+    if(!Number.isInteger(start) || !Number.isInteger(end)) { return 'ERROR'; }
    
     if(start > end) {
         let temp = start;
